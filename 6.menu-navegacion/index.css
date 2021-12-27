@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+html{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+}
+.container{
+  position: relative;
+}
+.section{
+  block-size: 100vh;
+  background-attachment: fixed;
+}
+.section-title{
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+  line-height: 100vh;
+}
+.nav{
+  background: rgba(49, 99, 227, 0.747);
+  block-size: 3.75rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.nav-list{
+  block-size: inherit;
+  list-style: none;
+  text-align: end;
+  margin: 0;
+  padding: 0;
+}
+.nav-item{
+  block-size: inherit;
+  display: inline-block;
+}
+.nav-item:hover .nav-enlace{
+  background: white;
+  color: rgb(104, 144, 244);
+}
+.nav-enlace{
+  display: inline-block;
+  block-size: inherit;
+  line-height: 3.75rem;
+  color: white;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  text-decoration: none;
+}
+.section:nth-of-type(1){
+  background: linear-gradient(red, orange);
+  margin-block-start: 3.75rem;
+}
+.section:nth-of-type(2){
+  background: linear-gradient(yellow, orange);
+}
+.section:nth-of-type(3){
+  background: linear-gradient(rgb(244, 194, 103), rgb(232, 73, 208));
+}
