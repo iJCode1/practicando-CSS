@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  display: flex;
+  place-content: center;
+  width: 100%;
+}
+.card{
+  border-radius: 6px;
+  box-shadow: 4px 3px 8px 0px #334756;
+  margin-block-start: 20px;
+  max-width: 300px;
+  overflow: hidden;
+  width: 100%;
+}
+.card__header{
+  height: 200px;
+  object-fit: cover;
+  width: 100%
+}
+.card__body{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-inline: 20px;
+  padding-block: 14px;
+  text-align: center;
+}
+.card__body h2{
+  color: red;
+}
+.card__body button{
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 14px;
+}
+.card__body button:hover{
+  background-color: #FF5C58;
+}
