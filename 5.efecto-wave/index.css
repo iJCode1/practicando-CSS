@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+html{
+  font-family: 'Raleway', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.hero-container{
+  background: linear-gradient(rgba(2, 137, 255, 0.4) 0%, rgba(164, 83, 222, 0.4) 100%), url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: .1px;
+  block-size: 100vh;
+  /* min-block-size: 150vh; */
+  background-size: cover;
+  inline-size: 100%;
+  position: relative;
+}
+.hero-title,
+.hero-description{
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+.hero-title{
+  font-size: 4rem;
+  margin-block-start: 12.5rem;
+  margin-block-end: 1rem;
+}
+.hero-description{
+  font-size: 2rem;
+  margin-block-end: 1rem;
+}
+.hero-cta{
+  color: rgb(95, 135, 237);
+  background-color: white;
+  border-radius: 6px;
+  padding-block-end: 15px;
+  padding-block-start: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  inline-size: 9rem;
+  margin: 0 auto;
+}
+.hero-cta:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(91, 129, 223);
+}
+.hero-wave{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
