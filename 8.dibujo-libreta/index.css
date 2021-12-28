@@ -1,0 +1,40 @@
+:root{
+  --linear-gradient: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  --line: #FFCC1D;
+}
+body{
+  background-color: #191919;
+}
+.notebook{
+  /* border: 1px solid red; */
+  border-radius: .5rem;
+  background-image: var(--linear-gradient);
+  box-shadow: 8px 8px white, 16px 16px rgba(255, 255, 255, 0.098);
+  block-size: 28.75rem;
+  inline-size: 21.875rem;
+  margin-block-start: 5rem;
+  margin-inline-start: 5rem;
+  padding-top: .1px;
+}
+.notebook-circle{
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 40px, 0 80px, 0 120px, 0 160px, 0 200px, 0 240px, 0 280px, 0 320px, 0 360px, 0 400px;
+  block-size: 1rem;
+  color: white;
+  inline-size: 1rem;
+  margin-inline-start: .6rem;
+  margin-block-start: 1.3rem;
+  position: relative;
+}
+.notebook-line{
+  block-size: .5rem;
+  background-color: var(--line);
+  border-radius: 1rem;
+  box-shadow: 0 40px, 0 80px, 0 120px, 0 160px, 0 200px, 0 240px, 0 280px, 0 320px, 0 360px, 0 400px;
+  color: var(--line);
+  inline-size: 2.5rem;
+  left: -30px;
+  position: absolute;
+  transform: translateY(50%);
+}
