@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+:root{
+  --blue: #CDDEFF;
+}
+body{
+  margin: 0;
+  background-color: var(--blue);
+}
+html{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+.cardsContainer{
+  align-items: center;
+  display: flex;
+  max-inline-size: 1280px;
+  margin: 0 auto;
+  min-block-size: 100vh;
+  /* border: 1px solid green; */
+  justify-content: center;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
+}
+.cards{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-block-end: 2rem;
+  padding-block-start: 2rem;
+}
+.card{
+  box-sizing: border-box;
+  background: white;
+  border-radius: .25rem;
+  overflow: hidden;
+  padding-block-end: 1.5rem;
+  padding-inline-start: 2rem;
+  padding-inline-end: 2rem;
+  box-shadow: 0 0 10px rgb(111, 111, 120);
+  min-inline-size: 16rem;
+  flex: 20rem;
+  max-inline-size: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.card-image{
+  block-size: 15rem;
+  inline-size: 15rem;
+  margin: 0 auto;
+}
+.card-image img{
+  block-size: 100%;
+  inline-size: 100%;
+  vertical-align: middle;
+}
+.card-title{
+  text-transform: capitalize;
+  margin-block-start: 0;
+  margin-block-end: 1rem;
+}
+.card-paragraph{
+  margin: 0;
+  margin-block-end: 3rem;
+}
+.card-cta{
+  display: inline-block;
+  background: #6155A6;
+  color: white;
+  border-radius: .25rem;
+  line-height: 3rem;
+  padding-inline-start: 2rem;
+  padding-inline-end: 2rem;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-block-start: auto;
+}
+.card-cta:hover{
+  background: #43339d;
+}
+.card-cta:active{
+  transform: scale(.9);
+}
