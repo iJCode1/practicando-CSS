@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root{
+  --background: #252525;
+  --black: #1f1e1e;
+  --gray: #9b9c9d;
+  --white: #FFFFFF;
+  --blue: #5787fe;
+  --blue20: #74b5ee;
+  --baseFont: 'Raleway', sans-serif;
+  --max-inline-size-card: 20rem;
+  --min-inline-size-card: 15.625rem;
+}
+body{
+  margin: 0;
+}
+html{
+  font-family: var(--baseFont);
+}
+.cards{
+  inline-size: 100%;
+  block-size: 100vh;
+  background-position: bottom;
+  background-image: linear-gradient(360deg, var(--background) 50%, var(--white) 50%);
+}
+.cards-container{
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  max-inline-size: 80rem;
+  margin: 0 auto;
+  align-items: center;
+  /* gap: 4.5rem; */
+  flex-wrap: wrap;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-end: 2rem;
+  padding-block-start: 2rem;
+  box-sizing: border-box;
+}
+.card{
+  box-sizing: border-box;
+  background-color: var(--white);
+  border-radius: .75rem;
+  /* max-inline-size: var(--max-inline-size-card); */
+  /* min-inline-size: var(--min-inline-size-card); */
+  inline-size: 28%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  text-align: center;
+  padding-block-end: 2.5rem;
+  padding-block-start: 2.5rem;
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 1.5rem;
+  box-shadow: 0 0 15px rgba(0,0,0,.4);
+}
+.card-concept{
+  font-size: 1.375rem;
+  margin: 0;
+}
+.card-cost{
+  font-size: 3rem;
+  margin: 0;
+}
+.card-people{
+  margin: 0;
+  color: var(--gray);
+  margin-block-end: 1.375rem;
+}
+.card-characteristics{
+  color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-block-end: 1.375rem;
+}
+.card-characteristic{
+  margin: 0;
+}
+.card-cta{
+  background-color: var(--black);
+  color: var(--white);
+  align-self: center;
+  padding-inline-end: 1.5rem;
+  padding-inline-start: 1.5rem;
+  line-height: 3rem;
+  border-radius: 1.375rem;
+  text-decoration: none;
+  font-size: .875rem;
+  outline: none;
+  border: 1px solid transparent;
+}
+.card-cta:hover,
+.card-cta:focus{
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--gray);
+}
+.card-cta:active{
+  transform: scale(.9);
+}
+.card.is-blue{
+  background-color: var(--blue);
+  color: var(--white);
+}
+.card.is-blue .card-people,
+.card.is-blue .card-characteristics{
+  color: var(--white);
+}
+.card.is-blue .card-cta{
+  background-color: var(--white);
+  color: var(--black);
+}
+.card.is-blue .card-cta:hover,
+.card.is-blue .card-cta:focus{
+  background-color: var(--blue20);
+  color: var(--white);
+}
+@media screen and (max-width: 1024px){
+  .cards{
+    background-image: none;
+  }
+  .cards-container{
+    gap: 2rem;
+  }
+  .card{
+    inline-size: 40%;
+  }
+}
+@media screen and (max-width: 768px){
+  .card{
+    inline-size: 90%;
+  }
+}
+@media screen and (max-width: 425px){
+  .card{
+    inline-size: 100%;
+  }
+}
