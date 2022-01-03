@@ -19,7 +19,6 @@ html{
   background-image: linear-gradient(var(--linearHero));
 }
 .hero{
-  border: 5px solid blue;
   min-block-size: 100vh;
   max-inline-size: var(--max-inline-size);
   margin: 0 auto;
@@ -51,7 +50,6 @@ html{
 }
 /* --------------- About --------------- */
 .about{
-  border: 5px solid palegreen;
   background-color: var(--white);
   max-inline-size: var(--max-inline-size);
   margin: 0 auto;
@@ -62,6 +60,8 @@ html{
   padding-inline-start: 2rem;
   gap: 2rem;
   justify-content: space-between;
+  padding-block-end: 1.5rem;
+  padding-block-start: 1.5rem;
 }
 .about-text{
   inline-size: 50%;
@@ -104,7 +104,6 @@ html{
   background-image: linear-gradient(var(--linearPortfolio));
 }
 .portfolio{
-  border: 5px solid darkorange;
   min-block-size: 100vh;
   max-inline-size: var(--max-inline-size);
   margin: 0 auto;
@@ -131,7 +130,6 @@ html{
 }
 .portfolio-card{
   flex: 1;
-  border: 1px solid red;
   max-inline-size: 22.5rem;
   min-inline-size: 18.75rem;
   border-radius: .5rem;
@@ -148,6 +146,7 @@ html{
   block-size: 100%;
   vertical-align: middle;
   object-fit: cover;
+  aspect-ratio: 16/9;
 }
 .card-text{
   padding: 1.4rem;
@@ -202,7 +201,6 @@ html{
 }
 .gallery{
   min-block-size: 100vh;
-  border: 5px solid crimson;
   max-inline-size: var(--max-inline-size);
   margin: 0 auto;
   padding: 1rem;
@@ -234,7 +232,6 @@ html{
   background-image: linear-gradient(var(--linearPortfolio));
 }
 .languages{
-  border: 5px solid magenta;
   /* min-block-size: 100vh; */
   max-inline-size: var(--max-inline-size);
   margin: 0 auto;
@@ -251,20 +248,22 @@ html{
 }
 .languages-logos{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5rem;
 }
 /* --------------- Footer --------------- */
 .footer-container{
   background-color: var(--orange);
 }
 .footer{
-  border: 5px solid green;
   max-inline-size: var(--max-inline-size);
   margin: 0 auto;
   display: flex;
   align-items: center;
   padding-block-end: 4rem;
   padding-block-start: 4rem;
+  padding-inline-end: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 .footer-text{
   inline-size: 50%;
@@ -317,4 +316,77 @@ html{
 }
 .footer-img img{
   vertical-align: middle;
+  inline-size: 50%;
+  block-size: 50%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px){
+  .hero{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-text{
+    text-align: center;
+    inline-size: 100%;
+  }
+  .hero-img{
+    order: -1;
+    inline-size: 60%;
+  }
+  .about{
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .about-text{
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-title{
+    text-align: center;
+  }
+  .about-cta{
+    align-self: center;
+  }
+  .about-img{
+    inline-size: 70%;
+  }
+  .languages-logos{
+    gap: 2.5rem;
+  }
+  .footer{
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .footer-text{
+    inline-size: 100%;
+  }
+  .footer-img{
+    inline-size: 90%;
+  }
+}
+@media screen and (max-width: 472px){
+  .hero-title{
+    font-size: 3rem;
+  }
+  .language-logo{
+    inline-size: 4.68rem;
+    block-size: 4.68rem;
+  }
+}
+@media screen and (max-width: 425px){
+  .language-logo{
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    max-inline-size: 4.68rem;
+    max-block-size: 4.68rem;
+    flex: 1;
+  }
+  .footer-icons{
+    gap: 3rem;
+  }
+  .footer-list{
+    gap: 1rem;
+    align-items: center;
+  }
 }
