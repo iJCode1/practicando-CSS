@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+:root{
+  --gray: #f2eeee;
+  --gray20: rgb(108, 108, 108);
+  --gray30: rgb(89, 89, 89);
+}
+body{
+  margin: 0;
+  min-block-size: 600px;
+  block-size: 100vh;
+  display: flex;
+  align-items: center;
+}
+html{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+.calendar{
+  inline-size: 90%;
+  max-inline-size: 75rem;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  border-radius: .5rem;
+}
+.calendar-month{
+  font-weight: 300;
+  text-align: center;
+  color: var(--gray20);
+}
+.calendar-body{
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 3.75rem;
+  grid-auto-rows: 5.625rem;
+  color: var(--gray30);
+}
+.calendar-day{
+  font-weight: 300;
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+  /* padding: .625rem 0; */
+  line-height: 3.75rem;
+  border-block-start: 1px solid var(--gray);
+  border-block-end: 1px solid var(--gray);
+}
+.calendar-dayNumber{
+  text-align: end;
+  padding-inline-end: 1rem;
+  font-size: .9rem;
+  border-inline-end: 1px solid var(--gray);
+  border-block-end: 1px solid var(--gray);
+  margin: 0;
+  padding-block-start: 1rem;
+}
