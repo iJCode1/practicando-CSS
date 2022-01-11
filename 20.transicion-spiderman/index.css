@@ -1,0 +1,67 @@
+body{
+  margin: 0;
+}
+.container{
+  max-inline-size: 30rem;
+  aspect-ratio: 1/1;
+  inline-size: 90%;
+  margin: 2rem auto;
+  background-color: crimson;
+  overflow: hidden;
+  margin-block-end: 10rem;
+}
+.container::before{
+  content: '';
+  inline-size: 100%;
+  block-size: 100%;
+  background-image: url('./images/spidy.png');
+  background-position: top left;
+  display: block;
+  transform: translateY(-18%);
+  transition: transform .8s;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.container:hover::before{
+  transform: translateY(0px);
+}
+/* --------- Cuadrado --------- */
+.activador{
+  inline-size: 90%;
+  margin: 0 auto;
+  margin-block-end: 2rem;
+}
+.activador-cta{
+  font-family: 'Arial';
+  display: inline-block;
+  inline-size: 12rem;
+  line-height: 3rem;
+  border-radius: .5rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: violet;
+  margin-block-end: 1rem;
+  transition: transform .3s ease-in-out;
+}
+.activador-cta:active{
+  transform: scale(.9);
+}
+.activador-cta:hover{
+  background-color: rgb(228, 61, 228);
+}
+.cuadrado{
+  box-sizing: border-box;
+  inline-size: 14rem;
+  block-size: 14rem;
+  background-color: rgb(27, 174, 105);
+  transition: transform .5s ease-in-out;
+  color: white;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Arial';
+}
+.cuadrado:target{
+  transform: scale(.6) rotate(180deg);
+}
