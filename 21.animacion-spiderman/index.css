@@ -1,0 +1,71 @@
+.container{
+  inline-size: 31.25rem;
+  block-size: 31.25rem;
+  background-color: rgb(70, 70, 233);
+  overflow: hidden;
+}
+.container img{
+  block-size: 80%;
+  display: block;
+  margin: 0 auto;
+  transition: transform 3s ease-in-out;
+  animation: spidy 3s infinite;
+}
+@keyframes spidy {
+  0%{
+    transform: translateY(-10%);
+  }
+  25%{
+    transform: translateY(0) rotate(5deg);
+  }
+  50%{
+    transform: rotate(-5deg);
+  }
+  75%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: translateY(-10%);
+  }
+}
+/* ---------- Cuadrado ---------- */
+.cuadrado{
+  inline-size: 14rem;
+  block-size: 14rem;
+  background: tomato;
+  margin: 4rem auto;
+  /* Declarando animación por partes*/
+  animation-name: rotacion;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  /* nVeces | infinite */
+  animation-delay: 0s;
+  animation-direction: normal;
+  /* normal | reverse | alternate */
+  animation-fill-mode: forwards;
+  /* forwards | backwards | normal | both */
+  animation-play-state: paused;
+  /* shorthand */
+  animation: rotacion 3s infinite paused;
+}
+/* Cambiando valor del estado de la animación al hacer hover */
+.cuadrado:hover{
+  animation-play-state: running;
+}
+
+/* Animación */
+@keyframes rotacion {
+  from{
+    transform: rotate(0deg);
+    background: green;
+  }
+  50%{
+    transform: rotate(360deg) scale(1.5);
+    background: blueviolet;
+  }
+  to{
+    transform: rotate(0);
+    background: burlywood;
+  }
+}
