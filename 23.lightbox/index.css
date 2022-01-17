@@ -1,0 +1,71 @@
+body{
+  margin: 0;
+  min-block-size: 37.5rem;
+  block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
+}
+.card{
+  inline-size: 22rem;
+  block-size: 32rem;
+  position: relative;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.card img{
+  inline-size: 100%;
+  block-size: 100%;
+}
+.card-cta{
+  position: absolute;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  color: transparent;
+  text-decoration: none;
+}
+.modal:target{
+  transform: scale(1) rotate(360deg);
+}
+.modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 100%;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  background-size: cover;
+  background-color: rgba(96, 96, 96, 0.377);
+  transform: scale(0) rotate(0);
+  transition: .5s transform ease-in-out;
+}
+.modal-img{
+  background-image: url('./img/image.jpg');
+  background-size: cover;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: 80%;
+  block-size: 60%;
+  position: relative;
+}
+.modal-cta{
+  align-self: flex-start;
+  display: inline-block;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  color: white;
+  background-color: tomato;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: .25rem;
+}
