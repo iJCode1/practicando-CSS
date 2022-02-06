@@ -1,0 +1,110 @@
+:root{
+  --clip: circle(0 at top right);
+  --show: scale(0);
+  --transitionModal: .5s transform;
+  --transitionBackground: 1s .5s clip-path;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  block-size: 100vh;
+  min-block-size: 37.5rem;
+  display: flex;
+}
+html{
+  font-family: 'Raleway', sans-serif;
+}
+.option{
+  margin: auto;
+}
+.cta{
+  display: block;
+  background-color: #548CFF;
+  text-decoration: none;
+  inline-size: 12rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: transform .3s;
+}
+.cta:active{
+  transform: scale(.9);
+}
+.modalContainer{
+  block-size: 100%;
+  inline-size: 100%;
+  display: flex;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: rgba(0, 0, 0, 0.714);
+  clip-path: var(--clip);
+  transition: var(--transitionBackground);
+}
+.modalContainer:target{
+  --clip: circle(150% at top right);
+  --show: scale(1);
+  --transitionModal: .5s 1s transform;
+  --transitionBackground: 1s clip-path;
+}
+.modal{
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  block-size: 70vh;
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  background-color: white;
+  inline-size: 90%;
+  padding: 2rem;
+  position: relative;
+  max-inline-size: 75rem;
+  margin: auto;
+  transform: var(--show);
+  transition: var(--transitionModal);
+}
+.modal-img{
+  grid-column: 1/6;
+}
+.modal-img img{
+  inline-size: 100%;
+  block-size: 100%;
+}
+.modal-text{
+  grid-column: 7/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal-title{
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+}
+.modal-paragraph{
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 0;
+}
+.modal-cta{
+  margin: 0 auto;
+}
+.modal-close{
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  background-color: crimson;
+  color: white;
+  text-decoration: none;
+  padding: .5rem .8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  transition: transform .2s;
+  cursor: pointer;
+}
+.modal-close:active{
+  transform: scale(.9);
+}
