@@ -1,0 +1,17 @@
+.svg{
+  inline-size: 31.25rem;
+}
+#globo{
+  transform: scale(.2);
+  transform-origin: top right;
+  animation: globo 2s 3s forwards infinite alternate;
+}
+#background{
+  transform: translate(-100%);
+  animation: globo 3s forwards infinite alternate;
+}
+@keyframes globo {
+  to{
+    transform: unset;
+  }
+}
