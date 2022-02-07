@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  block-size: 100vh;
+}
+.main{
+  max-inline-size: 75rem;
+  margin: auto;
+  position: relative;
+  padding: 1rem;
+}
+.main-image{
+  inline-size: 95%;
+  block-size: 31.25rem;
+  border-radius: 4%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: none;
+}
+.main-image img{
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+  object-fit: cover;
+}
+.form{
+  background-color: white;
+  border-radius: .5rem;
+  padding: 1.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 7px 15px rgba(0,0,0,.3);
+  inline-size: 90%;
+}
+.form-title{
+  margin: 0;
+  font-size: 1.4rem;
+  margin-block-end: .5rem;
+}
+.form-link{
+  color: rgb(160, 160, 160);
+  margin-block-start: -1.5rem;
+}
+.form-link:nth-of-type(2){
+  margin-block-end: 1rem;
+  color: black;
+}
+.form-group{
+  position: relative;
+}
+.form-input{
+  box-sizing: border-box;
+  padding: 0.625rem;
+  padding-inline-start: 0.3125rem;
+  border: 0;
+  color: rgb(100, 100, 100);
+  border-block-end: 1px solid rgb(160, 160, 160);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  display: block;
+  inline-size: 100%;
+  outline: none;
+  position: relative;
+}
+.form-input:focus{
+  color: rgb(75, 75, 75);
+}
+.form-label{
+  position: absolute;
+  color: rgb(160, 160, 160);
+  font-size: 1rem;
+  inset-inline-start: 0.3125rem;
+  inset-block-start: 0.625rem;
+  pointer-events: none;
+  transition: transform .4s, color .3s;
+  transform-origin: top left;
+}
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label{
+  color: rgb(48, 141, 255);
+  transform: scale(.7) translateY(-2.125rem);
+}
+.form-bar{
+  display: block;
+  position: absolute;
+  inset-block-end: 0;
+  inset-block-start: 0;
+  inline-size: 100%;
+  border-bottom: 1px solid rgb(48, 141, 255);
+  transform: scale(0);
+  transform-origin: left bottom;
+  transition: .3s transform;
+}
+.form-input:focus ~ .form-bar{
+  transform: scale(1);
+}
+.form-cta{
+  color: white;
+  background-color: black;
+  border-radius: .5rem;
+  display: block;
+  padding: .8rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: .8rem;
+  border: none;
+  transition: transform .2s;
+}
+.form-cta:active{
+  transform: scale(.9);
+}
+.form-cta:hover{
+  background-color: rgba(0, 0, 0, 0.700);
+}
+@media screen and (min-width: 425px){
+  .main-image{
+    block-size: 40rem;
+    inline-size: 85%;
+  }
+  .form{
+    padding: 2rem 1.5rem;
+    inset-inline-start: 2%;
+    inline-size: auto;
+    inset-block-start: 15%;
+  }
+  .form-title{
+    font-size: 1.8rem;
+  }
+  .form-cta{
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 500px){
+  .main-image{
+    display: block;
+  }
+  .form{
+    position: absolute;
+    inset-inline-start: 3%;
+    inline-size: auto;
+  }
+}
+@media screen and (min-width: 768px){
+  .form{
+    padding: 2.5rem 2rem;
+  }
+  .form-title{
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px){
+  .main-image{
+    inline-size: 95%;
+  }
+  .form{
+    inset-inline-start: 0%;
+  }
+  .form-title{
+    font-size: 2.2rem;
+  }
+  .form-input{
+    font-size: 1.1rem;
+  }
+  .form-cta{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1080px){
+  .form{
+    inset-inline-start: -3%;
+  }
+}
