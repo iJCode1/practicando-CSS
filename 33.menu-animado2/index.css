@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root{
+  --red30: #e66c6c;
+  --blue30: #30475E;
+  --green30: #8ca787;
+}
+body{
+  margin: 0;
+  block-size: 100vh;
+  min-block-size: 37.5rem;
+}
+.main{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  block-size: inherit;
+  font-family: 'Poppins', sans-serif;
+}
+.main-barra{
+  grid-column: 1/5;
+  grid-row: 1/-1;
+  background-color: var(--red30);
+  block-size: inherit;
+}
+.main-content{
+  grid-row: 1/-1;
+  grid-column: 3/-1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  block-size: 90%;
+  block-size: inherit;
+  align-items: center;
+}
+.main-image{
+  grid-row: 2/4;
+  grid-column: 1/5;
+}
+.main-image img{
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+  object-fit: cover;
+}
+.main-text{
+  grid-row: 2/4;
+  grid-column: 6/-2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-title{
+  font-size: 2.4rem;
+  margin: 0;
+}
+.main-paragraph{
+  margin: 0;
+}
+.main-cta{
+  text-decoration: none;
+  background-color: var(--red30);
+  border-radius: .2rem;
+  color: white;
+  transition: transform .2s, opacity .2s;
+  padding: .8rem 2.5rem;
+  align-self: flex-start;
+}
+.main-cta:active{
+  transform: scale(.9);
+}
+.main-cta:hover{
+  opacity: .7;
+}
+.menu{
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.menu-input{
+  display: none;
+}
+.menu-input:checked ~ .menu-button > .menu-label .menu-show{
+  transform: scale(0);
+  transition: none;
+}
+.menu-input:checked ~ .menu-button > .menu-label .menu-close{
+  transform: scale(1);
+  transition: transform .5s;
+}
+.menu-button{
+  position: absolute;
+  inset-inline-end: 2rem;
+  inset-block-start: 2rem;
+  cursor: pointer;
+}
+.menu-label{
+  cursor: pointer;
+  display: inline-block;
+  inline-size: 3rem; 
+  block-size: 3rem; 
+  box-sizing: border-box;
+  background-color: var(--green30);
+  border-radius: 50%;
+  padding: .5rem;
+  position: relative;
+  z-index: 5;
+}
+.menu-button:active{
+  transform: scale(.9);
+}
+.menu-icon{
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+}
+.menu-show{
+  transition: transform .5s;
+}
+.menu-close{
+  transform: scale(0);
+  transition: none;
+}
+.menu-list{
+  background-color: var(--blue30);
+  list-style: none;
+  display: grid;
+  place-content: center;
+  align-items: center;
+  block-size: 100%;
+  gap: 1rem;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  clip-path: circle(0% at top right);
+  transition: clip-path 1s;
+  margin: 0;
+}
+.menu-input:checked ~ .menu-list{
+  clip-path: circle(150% at top right);
+  z-index: -1;
+}
+.menu-item{
+  text-align: center;
+  padding: 1rem;
+  transition: transform .2s;
+}
+.menu-input:checked ~ .menu-list .menu-item{
+  animation-name: show;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  opacity: 0;
+  transform: translateY(-20%);
+  --time1: 1.5s;
+  --time2: 2s;
+  --time3: 2.5s;
+}
+.menu-item:nth-of-type(1){
+  animation-delay: var(--time1);
+}
+.menu-item:nth-of-type(2){
+  animation-delay: var(--time2);
+}
+.menu-item:nth-of-type(3){
+  animation-delay: var(--time3);
+}
+.menu-item:active{
+  transform: scale(.9);
+}
+.menu-item:hover .menu-link{
+  text-decoration: underline;
+}
+.menu-link{
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes show {
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
