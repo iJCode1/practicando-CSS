@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');:root{
+  --espiral: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+}
+body{
+  margin: 0;
+  display: flex;
+  block-size: 100vh;
+  min-block-size: 37.5rem;
+  padding: 1rem;
+}
+.notebook{
+  box-sizing: border-box;
+  margin: auto;
+  border: 1px solid black;
+  max-inline-size: 25.625rem;
+  max-block-size: 31.25rem;
+  background-color: rgba(143, 143, 143, 0.24);
+  position: relative;
+  inline-size: 90%;
+  block-size: 90%;
+  font-family: 'Indie Flower', cursive;
+}
+.notebook::after{
+  content: '';
+  block-size: 100%;
+  border-inline-start: 2px solid crimson;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 3.75rem;
+}
+.notebook-line{
+  display: block;
+  color: black;
+  box-shadow: 0px 40px, 0px 80px, 0px 120px, 0px 160px, 0px 200px, 0px 240px, 0px 280px, 0px 320px, 0px 360px, 0px 400px, 0px 440px, 0px 480px;
+  inline-size: 100%;
+  block-size: 1px;
+}
+.notebook-circle{
+  inline-size: 2rem;
+  block-size: 2rem;
+  border-radius: 50%;
+  color: white;
+  box-shadow: .8rem 5.2rem, .8rem 15.2rem, .8rem 25.2rem;
+}
+.notebook-hoops{
+  background-image: var(--espiral);
+  inline-size: 3.5rem;
+  block-size: 1rem;
+  border-radius: 3.5rem;
+  position: absolute;
+  inset-block-start: 5.8rem;
+  inset-inline-start: -1.5rem;
+}
+.notebook-hoops::before{
+  content: '';
+  background-image: var(--espiral);
+  inline-size: 3.5rem;
+  block-size: 1rem;
+  position: absolute;
+  inset-block-start: 10rem;
+  inset-inline-start: initial;
+  border-radius: 3.5rem;
+}
+.notebook-hoops::after{
+  content: '';
+  background-image: var(--espiral);
+  inline-size: 3.5rem;
+  block-size: 1rem;
+  position: absolute;
+  inset-block-start: 20rem;
+  inset-inline-start: initial;
+  border-radius: 3.5rem;
+}
+.notebook-image{
+  position: absolute;
+  inset-block-start: -3rem;
+  inset-inline-end: -2rem;
+  inline-size: 6.25rem;
+  block-size: 6.25rem;
+  transform: scale(0) rotate(0);
+  animation: spidy 1s 3s forwards;
+}
+.notebook-image img{
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.notebook-title{
+  margin-inline-start: 4.5rem;
+  margin-block-start: .8rem;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  animation: text 3s forwards;
+}
+.notebook-paragraph{
+  margin-inline-start: 4.5rem;
+  margin-block-start: -.6rem;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  animation: text 3s 2s forwards;
+}
+@keyframes spidy {
+  to{
+    transform: scale(1) rotate(-360deg);
+  }
+}
+@keyframes text {
+  to{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@media screen and (min-width: 425px) {
+  .notebook-image{
+    inset-inline-end: -3rem;
+  }
+}
