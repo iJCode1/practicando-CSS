@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root{
+  --blue30: #3E497A;
+  --blue20: #3e497ab7;
+}
+body{
+  margin: 0;
+  display: flex;
+  block-size: 100vh;
+  min-block-size: 37.5rem;
+}
+.botones{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+.cta{
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: .6rem 1.8rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.cta > span{
+  position: relative;
+  z-index: 5;
+}
+.cta1{
+  background-color: var(--blue30);
+}
+.cta1::before{
+  content: '';
+  position: absolute;
+  background-color: white;
+  opacity: .3;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  clip-path: circle(0 at center);
+  transition: clip-path .3s;
+}
+.cta1:hover::before{
+  clip-path: circle(100% at center);
+}
+.cta2{
+  color: var(--blue30);
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
+  background-color: white;
+}
+.cta2:hover{
+  color: white;
+}
+.cta2::after{
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--blue30);
+  clip-path: circle(0% at top left);
+  transition: clip-path .5s;
+}
+.cta2:hover::after{
+  clip-path: circle(150% at top left);
+}
+.cta3{
+  color: var(--blue30);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: transform .2s;
+}
+.cta3::after{
+  content: '';
+  inline-size: 70%;
+  border: 2px solid var(--blue30);
+  display: block;
+  margin: 0 auto;
+  margin-block-start: .4rem;
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  transition: clip-path .5s;
+  border-radius: 1rem;
+}
+.cta3:hover::after{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+.cta:active,
+.cta3:active{
+  transform: scale(.9);
+}
