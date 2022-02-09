@@ -3,6 +3,7 @@
   color: white;
   font-family: var(--open);
   padding: 2rem 1rem;
+  position: relative;
 }
 .footerContainer{
   display: flex;
@@ -56,7 +57,6 @@
 }
 .footer-paragraph{
   margin: 0;
-  /* margin-block-end: 1.3rem; */
 }
 .footer-socialContainer{
   display: flex;
@@ -67,9 +67,6 @@
   display: flex;
   align-items: center;
   gap: .6rem;
-}
-.footer-social:nth-of-type(3){
-  /* margin-block-end: 2rem; */
 }
 .footer-social img{
   display: block;
@@ -94,12 +91,13 @@
 }
 @media screen and (min-width: 768px){
   .footer{
-    padding-block-start: 3rem;
-    padding-block-end: 3rem;
+    padding-block-start: 4.5rem;
+    padding-block-end: 4.5rem;
   }
   .footerContainer{
     flex-direction: row;
     justify-content: space-between;
+    gap: 12rem;
   }
   .footer-form{
     order: 1;

@@ -1,4 +1,9 @@
 .hero{
+  --wave-bottom: url('../assets/img/bg-section-top-mobile-1.svg');
+  position: relative;
+  inline-size: 100%;
+}
+.heroContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,6 +12,7 @@
   text-align: center;
   padding: 0 .5rem;
   padding-block-start: 5rem;
+  padding-block-end: 6rem;
 }
 .hero-title{
   margin: 0;
@@ -61,8 +67,12 @@
   text-align: center;
 }
 @media screen and (min-width: 768px){
-  .hero{
+  .hero {
+    --wave-bottom: url('../assets/img/bg-section-top-desktop-1.svg');
+  }
+  .heroContainer{
     padding-block-start: 10rem;
+    padding-block-end: 10rem;
     gap: 2rem;
   }
   .hero-title{

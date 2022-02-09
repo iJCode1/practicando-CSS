@@ -7,6 +7,7 @@
 @import './service.css';
 @import './build.css';
 @import './footer.css';
+@import './wave.css';
 :root{
   --pink: hsl(322, 100%, 66%);
   --light_pink: hsl(321, 100%, 78%);
