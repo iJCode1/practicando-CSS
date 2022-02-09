@@ -4,6 +4,7 @@
 @import './button.css';
 @import './nav.css';
 @import './hero.css';
+@import './service.css';
 :root{
   --pink: hsl(322, 100%, 66%);
   --light_pink: hsl(321, 100%, 78%);
@@ -11,6 +12,7 @@
   --very_dark-cyan: hsl(192, 100%, 9%);
   --very_pale-blue: hsl(207, 100%, 98%);
   --gray: #95969b;
+  --blue: #e7f5fcc0;
   --poppins: 'Poppins', sans-serif;
   --open: 'Open Sans', sans-serif;
 }
