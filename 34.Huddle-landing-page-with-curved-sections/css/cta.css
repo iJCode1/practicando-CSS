@@ -1,0 +1,6 @@
+.cta{
+  transition: transform .2s;
+}
+.cta:active{
+  transform: scale(.9);
+}
