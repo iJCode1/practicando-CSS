@@ -1,0 +1,11 @@
+.build{
+  text-align: center;
+  font-family: var(--open);
+  padding: 6rem 0;
+  border: 2px solid red;
+}
+.build-title{
+  font-size: 1.6rem;
+  margin: 0;
+  margin-block-end: 2rem;
+}
