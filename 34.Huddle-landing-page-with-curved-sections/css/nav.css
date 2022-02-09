@@ -2,7 +2,6 @@
   box-sizing: border-box;
   block-size: 5rem;
   inline-size: 100%;
-  padding: 0 1rem;
 }
 .nav-list{
   display: flex;
@@ -31,6 +30,10 @@
   border-radius: 2rem;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   font-size: .8rem;
+}
+.nav-cta:hover{
+  background-color: var(--light_pink);
+  color: white;
 }
 @media screen and (min-width: 375px){
   .nav-link{

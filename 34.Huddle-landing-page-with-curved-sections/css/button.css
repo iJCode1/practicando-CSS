@@ -1,0 +1,24 @@
+.button{
+  background-color: var(--pink);
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  padding: 1rem 2.8rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  transition: transform .2s;
+  border: none;
+  font-size: 1rem;
+  display: inline-block;
+}
+.button.is-secondary{
+  border-radius: .4rem;
+  padding: 1rem 2.5rem;
+}
+.button:active{
+  transform: scale(.9);
+}
+.button:hover{
+  background-color: var(--light_pink);
+}
