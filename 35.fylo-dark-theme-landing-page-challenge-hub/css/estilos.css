@@ -4,6 +4,7 @@
 @import './wave.css';
 @import './nav.css';
 @import './hero.css';
+@import './service.css';
 :root{
   --dark-blue-10: hsl(217, 28%, 15%);
   --dark-blue-20: hsl(218, 28%, 13%);

@@ -1,0 +1,40 @@
+.services-container{
+  background-color: var(--dark-blue-20);
+  padding-block-start: 8rem;
+}
+.services{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+}
+.service{
+  text-align: center;
+  color: var(--white);
+}
+.service-image img{
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: 3.75rem;
+  margin-block-end: 2rem;
+}
+.service-two img{
+  max-inline-size: 3.125rem;
+}
+.service-text{
+  max-inline-size: 25rem;
+  margin: 0 auto;
+}
+.service-title{
+  font-family: var(--raleway);
+  margin: 0;
+  margin-block-end: .6rem;
+}
+.service-details{
+  margin: 0;
+}
+@media screen and (min-width: 768px){
+  .services{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
