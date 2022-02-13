@@ -1,0 +1,65 @@
+.comments-container{
+  background-color: var(--dark-blue-20);
+  padding-block-start: 8rem;
+}
+.comments{
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+.comments-card{
+  box-sizing: border-box;
+  color: var(--white);
+  background-color: var(--dark-blue-40);
+  border-radius: .4rem;
+  padding: 1.5rem;
+  z-index: 5;
+}
+.card-paragraph{
+  margin: 0;
+  margin-block-end: 1.2rem;
+  font-size: .8rem;
+  color: var(--gray);
+}
+.card-user{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.card-image{
+  inline-size: 1.875rem;
+  block-size: 1.875rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.card-image img{
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.card-name{
+  margin: 0;
+  font-family: var(--raleway);
+  font-size: .9rem;
+}
+.card-position{
+  margin: 0;
+  font-size: .7rem;
+}
+.comments-bg{
+  position: absolute;
+  inset-block-start: -1.5rem;
+  inset-inline-start: 0;
+  background-image: url('../assets/images/bg-quotes.png');
+  background-size: 2rem;
+  inline-size: 100%;
+  block-size: 2rem;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px){
+  .comments-container{
+    padding-block-start: 10rem;
+  }
+}

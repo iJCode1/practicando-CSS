@@ -6,11 +6,13 @@
 @import './hero.css';
 @import './service.css';
 @import './work.css';
+@import './comments.css';
 :root{
   --dark-blue-10: hsl(217, 28%, 15%);
   --dark-blue-20: hsl(218, 28%, 13%);
   --dark-blue-30: hsl(216, 53%, 9%);
   --dark-blue-40: hsl(219, 30%, 18%);
+  --gray: rgb(184, 178, 178);
   --cyan: hsl(176, 68%, 64%);
   --blue: hsl(198, 60%, 50%);
   --light-red: hsl(0, 100%, 63%);
