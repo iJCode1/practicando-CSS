@@ -1,0 +1,21 @@
+.button{
+  background: var(--gradient);
+  display: inline-block;
+  transition: transform .2s;
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--raleway);
+  text-transform: capitalize;
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+}
+.button:active{
+  transform: scale(.9);
+}
+.button:hover{
+  --cyan: hsl(176, 70%, 41%);
+  --blue: hsl(198, 73%, 29%);
+  --gradient: linear-gradient(to right, var(--cyan), var(--blue));
+}

@@ -1,0 +1,17 @@
+.wave{
+  position: absolute;
+  inline-size: 100%;
+  block-size: 20rem;
+  background-repeat: no-repeat;
+  background-size: 100% 20rem;
+}
+.wave-bottom{
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  background-image: var(--wave-bottom);
+}
+@media screen and (min-width: 768px){
+  .wave-top{
+    --wave-bottom: url('../assets/images/bg-curvy-desktop.svg');
+  }
+}
