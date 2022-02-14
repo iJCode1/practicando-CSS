@@ -1,6 +1,7 @@
 .comments-container{
   background-color: var(--dark-blue-20);
   padding-block-start: 8rem;
+  padding-block-end: 20rem;
 }
 .comments{
   display: grid;
@@ -61,5 +62,11 @@
 @media screen and (min-width: 768px){
   .comments-container{
     padding-block-start: 10rem;
+    padding-block-end: 15rem;
+  }
+}
+@media screen and (min-width: 1024px){
+  .comments-container{
+    padding-block-end: 18rem;
   }
 }

@@ -7,6 +7,7 @@
 @import './service.css';
 @import './work.css';
 @import './comments.css';
+@import './footer.css';
 :root{
   --dark-blue-10: hsl(217, 28%, 15%);
   --dark-blue-20: hsl(218, 28%, 13%);
