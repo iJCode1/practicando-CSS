@@ -37,13 +37,13 @@
   padding: 1rem 1.2rem;
   border-radius: 2rem;
   border: none;
-  color: var(--gray);
+  /* color: var(--gray); */
   font-size: .8rem;
   margin-block-end: 1.2rem;
 }
-.form-input::placeholder{
+/* .form-input::placeholder{
   color: var(--gray);
-}
+} */
 .form-cta{
   inline-size: 100%;
 }
